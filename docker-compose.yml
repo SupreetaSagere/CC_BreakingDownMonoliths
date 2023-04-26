@@ -1,0 +1,58 @@
+version: '3'
+services:
+  landing-service:
+    build: ./landing
+    ports:
+      - "5000:5000"
+    networks:
+      - my_network
+
+  addition-service:
+    build: ./addition
+    ports:
+      - "5001:5001"
+    networks:
+      - my_network
+
+  subtraction-service:
+    build: ./subtraction
+    ports:
+      - "5002:5002"
+    networks:
+      - my_network
+
+  multiplication-service:
+    build: ./multiplication
+    ports:
+      - "5003:5003"
+    networks:
+      - my_network
+
+  division-service:
+    build: ./division
+    ports:
+      - "5004:5004"
+    networks:
+      - my_network
+  exponent-service:
+    build: ./exponent
+    ports:
+      - "5005:5005"
+    networks:
+      - my_network
+
+  modulus-service:
+    build: ./modulus
+    ports:
+      - "5006:5006"
+    networks:
+      - my_network
+
+  greaterthan-service:
+    build: ./greaterthan
+    ports:
+      - "5007:5007"
+    networks:
+      - my_network
+networks:
+  my_network:
